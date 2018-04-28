@@ -22,9 +22,9 @@ state = {
           Something is coming soon...
         </p>
         <button>Switch month</button>
-        <Day month="May" day="17"/>
-        <Day month="June" day="1">Wedding anniversary congratulations</Day>
-        <Day month="July" day="4"/>
+        <Day month={this.state.days[0].month} day={this.state.days[0].day}/>
+        <Day month={this.state.days[1].month} day={this.state.days[1].day}>Wedding anniversary congratulations</Day>
+        <Day month={this.state.days[2].month} day={this.state.days[2].day}/>
       </div>
     );
   }
