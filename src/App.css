@@ -40,3 +40,11 @@ body {
     transform: rotate(360deg);
   }
 }
+button {
+  color: #fff;
+  background-color: rgba(245, 232, 28, 0.76);
+  padding: 7px;
+  font-size: 22px;
+  font-family: Gaegu;
+  border-radius: 10px;
+}

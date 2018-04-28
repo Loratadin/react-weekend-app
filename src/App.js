@@ -13,9 +13,10 @@ class App extends Component {
         <p className="App-intro">
           Something is coming soon...
         </p>
-        <Day name="May" number="17"/>
-        <Day name="June" number="1">Wedding anniversary congratulations</Day>
-        <Day name="July"number="4"/>
+        <button>Switch month</button>
+        <Day month="May" day="17"/>
+        <Day month="June" day="1">Wedding anniversary congratulations</Day>
+        <Day month="July" day="4"/>
       </div>
     );
   }
