@@ -12,11 +12,11 @@ state = {
   otherState: 'some other value'
 }
 
-switchMonthHandler = () => {
+switchMonthHandler = (newMonth) => {
 
   this.setState({
     days: [
-      { month:'January', day:17 },
+      { month: newMonth, day:17 },
       { month:'June', day:1 },
       { month:'July', day:30 }
     ]
@@ -32,14 +32,14 @@ switchMonthHandler = () => {
         <p className="App-intro">
           Something is coming soon...
         </p>
-        <button onClick={this.switchMonthHandler}>Switch month</button>
+        <button onClick={this.switchMonthHandler.bind(this, 'January')}>Switch month</button>
         <Day 
           month={this.state.days[0].month} 
           day={this.state.days[0].day}/>
         <Day 
           month={this.state.days[1].month} 
           day={this.state.days[1].day}
-          click={this.switchNameHandler}>Wedding anniversary congratulations</Day>
+          click={this.switchMonthHandler.bind(this, 'Jan!')}>Wedding anniversary congratulations</Day>
         <Day 
           month={this.state.days[2].month} 
           day={this.state.days[2].day}/>
