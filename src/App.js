@@ -3,6 +3,14 @@ import './App.css';
 import Day from './Day/Day';
 
 class App extends Component {
+state = {
+  days: [
+    { month:'May', day:17 },
+    { month:'June', day:1 },
+    { month:'July', day:4 }
+  ]
+}
+
   render() {
     return (
       <div className="App">
