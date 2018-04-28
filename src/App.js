@@ -14,7 +14,7 @@ class App extends Component {
           Something is coming soon...
         </p>
         <Day name="May" number="17"/>
-        <Day name="June" number="1"/>
+        <Day name="June" number="1">Wedding anniversary congratulations</Day>
         <Day name="July"number="4"/>
       </div>
     );
