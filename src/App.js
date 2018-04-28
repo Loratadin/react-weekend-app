@@ -22,6 +22,17 @@ switchMonthHandler = (newMonth) => {
     ]
   })
 }
+
+monthChangedHandler = (event) => {
+
+  this.setState({
+    days: [
+      { month:'May', day:17 },
+      { month: event.target.value, day:1 },
+      { month:'July', day:30 }
+    ]
+  })
+}
   render() {
     return (
       <div className="App">
@@ -39,7 +50,8 @@ switchMonthHandler = (newMonth) => {
         <Day 
           month={this.state.days[1].month} 
           day={this.state.days[1].day}
-          click={this.switchMonthHandler.bind(this, 'Jan!')}>Wedding anniversary congratulations</Day>
+          click={this.switchMonthHandler.bind(this, 'Jan!')}
+          changed={this.monthChangedHandler}>Wedding anniversary congratulations</Day>
         <Day 
           month={this.state.days[2].month} 
           day={this.state.days[2].day}/>
