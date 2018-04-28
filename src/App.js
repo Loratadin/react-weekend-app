@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Day from './Day/Day';
 
 class App extends Component {
   render() {
@@ -12,6 +13,9 @@ class App extends Component {
         <p className="App-intro">
           Something is coming soon...
         </p>
+        <Day name="May" number="17"/>
+        <Day name="June" number="1"/>
+        <Day name="July"number="4"/>
       </div>
     );
   }
