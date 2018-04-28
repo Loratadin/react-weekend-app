@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Gaegu");
+body {
+  font-family: Gaegu;
+  font-size: 25px;
+}
 .App {
   text-align: center;
 }
@@ -15,12 +20,15 @@
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 40px;
+  font-family: Amatic SC;
+  text-transform: uppercase;
 }
 
 .App-intro {
-  font-size: large;
+  font-size: 35px;
   color: #f5ba1c;
+  font-family: Amatic SC;
 }
 
 @keyframes App-logo-spin {
