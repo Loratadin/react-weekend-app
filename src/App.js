@@ -32,7 +32,7 @@ switchMonthHandler = (newMonth) => {
         <p className="App-intro">
           Something is coming soon...
         </p>
-        <button onClick={this.switchMonthHandler.bind(this, 'January')}>Switch month</button>
+        <button onClick={() => this.switchMonthHandler('January!!')}>Switch month</button>
         <Day 
           month={this.state.days[0].month} 
           day={this.state.days[0].day}/>
