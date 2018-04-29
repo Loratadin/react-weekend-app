@@ -1,4 +1,5 @@
 import React from 'react';
+import './Day.css';
 
 const day = (props) => {
 return (

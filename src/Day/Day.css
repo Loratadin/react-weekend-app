@@ -1,8 +1,9 @@
 .Day {
   width: 60%;
-  margin: auto;
-  border: 1 px solid #eee;
+  margin: 5px auto;
+  border: 1px solid #eee;
   box-shadow: 0 2px 3px #ccc;
-  padding: 16px;
+  padding: 10px;
   text-align: center;
+  background-color: #b5ca96;
 }
