@@ -25,6 +25,12 @@ monthChangedHandler = (event) => {
   })
 }
 
+deleteDayHandler = (dayIndex) => {
+ const days = [...this.state.days];
+ days.splice(dayIndex, 1);
+ this.setState({days: days});
+}
+
 toggleMonthsHandler = () => {
  const doesShow = this.state.showMonths;
  this.setState({ showMonths: !doesShow}); // to adjust the state
@@ -36,8 +42,9 @@ toggleMonthsHandler = () => {
     if (this.state.showMonths) {
 months = (
   <div>
-    {this.state.months.map(day => {
+    {this.state.months.map((day, index) => {
       return <Day 
+      click={() => this.deleteDayHandler(index)}
       month={day.month} 
       day={day.day}/>
     })}
