@@ -6,6 +6,10 @@ body {
   font-size: 25px;
   color: #47270d;
 }
+p {
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
 }
@@ -51,4 +55,6 @@ button {
   font-family: Gaegu;
   border-radius: 10px;
   margin-bottom: 20px;
+  cursor: pointer;
+  outline: 0;
 }

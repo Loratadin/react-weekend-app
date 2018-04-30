@@ -44,6 +44,7 @@ monthChangedHandler = (event) => {
           Something is coming soon...
         </p>
         <button onClick={() => this.switchMonthHandler('January!!')}>Switch month</button>
+        <div>
         <Day 
           month={this.state.days[0].month} 
           day={this.state.days[0].day}/>
@@ -55,6 +56,7 @@ monthChangedHandler = (event) => {
         <Day 
           month={this.state.days[2].month} 
           day={this.state.days[2].day}/>
+        </div>
       </div>
     );
   }
