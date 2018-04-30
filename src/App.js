@@ -10,7 +10,7 @@ state = {
     { month:'July', day:4 }
   ],
   otherState: 'some other value',
-  showMonths: false
+  showDays: false
 }
 
 switchMonthHandler = (newMonth) => {
@@ -46,17 +46,11 @@ toggleMonthsHandler = () => {
     if (this.state.showMonths) {
 months = (
   <div>
-  <Day 
-    month={this.state.days[0].month} 
-    day={this.state.days[0].day}/>
-  <Day 
-    month={this.state.days[1].month} 
-    day={this.state.days[1].day}
-    click={this.switchMonthHandler.bind(this, 'Jan!')}
-    changed={this.monthChangedHandler}>Wedding anniversary congratulations</Day>
-  <Day 
-    month={this.state.days[2].month} 
-    day={this.state.days[2].day}/>
+    {this.state.months.map(day => {
+      return <Day 
+      month={day.month} 
+      day={day.day}/>
+    })}
   </div> 
 );
     }
