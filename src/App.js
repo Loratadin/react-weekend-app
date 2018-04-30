@@ -40,6 +40,26 @@ toggleMonthsHandler = () => {
  this.setState({ showMonths: !doesShow}); // to adjust the state
 }
   render() {
+
+    let months = null;
+
+    if (this.state.showMonths) {
+months = (
+  <div>
+  <Day 
+    month={this.state.days[0].month} 
+    day={this.state.days[0].day}/>
+  <Day 
+    month={this.state.days[1].month} 
+    day={this.state.days[1].day}
+    click={this.switchMonthHandler.bind(this, 'Jan!')}
+    changed={this.monthChangedHandler}>Wedding anniversary congratulations</Day>
+  <Day 
+    month={this.state.days[2].month} 
+    day={this.state.days[2].day}/>
+  </div> 
+);
+    }
     return (
       <div className="App">
         <header className="App-header">
@@ -49,23 +69,8 @@ toggleMonthsHandler = () => {
         <p className="App-intro">
           Something is coming soon...
         </p>
-        <button onClick={this.toggleMonthsHandler}>Switch month</button>
-      {
-          this.state.showMonths ? // check the condition true or false. If true returns div if false null
-        <div>
-        <Day 
-          month={this.state.days[0].month} 
-          day={this.state.days[0].day}/>
-        <Day 
-          month={this.state.days[1].month} 
-          day={this.state.days[1].day}
-          click={this.switchMonthHandler.bind(this, 'Jan!')}
-          changed={this.monthChangedHandler}>Wedding anniversary congratulations</Day>
-        <Day 
-          month={this.state.days[2].month} 
-          day={this.state.days[2].day}/>
-        </div> : null
-      }
+        <button onClick={this.toggleMonthsHandler}>Show months</button>
+        {months}
       </div>
     );
   }
