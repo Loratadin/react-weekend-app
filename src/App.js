@@ -5,9 +5,9 @@ import Day from './Day/Day';
 class App extends Component {
 state = {
   months: [
-    { month:'May', day:17 },
-    { month:'June', day:1 },
-    { month:'July', day:4 }
+    { id: 'ghjr', month:'May', day:17 },
+    { id: 'lkhr', month:'June', day:1 },
+    { id: 'svnw', month:'July', day:4 }
   ],
   otherState: 'some other value',
   showDays: false
@@ -46,7 +46,8 @@ months = (
       return <Day 
       click={() => this.deleteDayHandler(index)}
       month={day.month} 
-      day={day.day}/>
+      day={day.day}
+      key={day.id}/>
     })}
   </div> 
 );
