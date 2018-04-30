@@ -9,7 +9,8 @@ state = {
     { month:'June', day:1 },
     { month:'July', day:4 }
   ],
-  otherState: 'some other value'
+  otherState: 'some other value',
+  showMonths: false
 }
 
 switchMonthHandler = (newMonth) => {
@@ -33,6 +34,11 @@ monthChangedHandler = (event) => {
     ]
   })
 }
+
+toggleMonthsHandler = () => {
+ const doesShow = this.state.showMonths;
+ this.setState({ showMonths: !doesShow}); // to adjust the state
+}
   render() {
     return (
       <div className="App">
@@ -43,7 +49,9 @@ monthChangedHandler = (event) => {
         <p className="App-intro">
           Something is coming soon...
         </p>
-        <button onClick={() => this.switchMonthHandler('January!!')}>Switch month</button>
+        <button onClick={this.toggleMonthsHandler}>Switch month</button>
+      {
+          this.state.showMonths ? // check the condition true or false. If true returns div if false null
         <div>
         <Day 
           month={this.state.days[0].month} 
@@ -56,7 +64,8 @@ monthChangedHandler = (event) => {
         <Day 
           month={this.state.days[2].month} 
           day={this.state.days[2].day}/>
-        </div>
+        </div> : null
+      }
       </div>
     );
   }
