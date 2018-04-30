@@ -14,15 +14,22 @@ state = {
 }
 
 
-monthChangedHandler = (event) => {
+monthChangedHandler = (event, id) => {
 
-  this.setState({
-    months: [
-      { month:'May', day:17 },
-      { month: event.target.value, day:1 },
-      { month:'July', day:30 }
-    ]
-  })
+  const dayIndex = this.state.days.findIndex(p => {
+    return p.id === id;
+  });
+
+  const day = {
+    ...this.state.days[dayIndex]
+  };
+
+  day.name = event.target.value;
+
+  const days = [...this.state.days];
+  days[dayIndex] = day;
+
+  this.setState({days: days})
 }
 
 deleteDayHandler = (dayIndex) => {
@@ -47,7 +54,8 @@ months = (
       click={() => this.deleteDayHandler(index)}
       month={day.month} 
       day={day.day}
-      key={day.id}/>
+      key={day.id}
+      changed={(event) => this.monthChangedHandler(event, day.id)}/>
     })}
   </div> 
 );
