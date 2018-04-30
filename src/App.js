@@ -4,7 +4,7 @@ import Day from './Day/Day';
 
 class App extends Component {
 state = {
-  days: [
+  months: [
     { month:'May', day:17 },
     { month:'June', day:1 },
     { month:'July', day:4 }
@@ -13,21 +13,11 @@ state = {
   showDays: false
 }
 
-switchMonthHandler = (newMonth) => {
-
-  this.setState({
-    days: [
-      { month: newMonth, day:17 },
-      { month:'June', day:1 },
-      { month:'July', day:30 }
-    ]
-  })
-}
 
 monthChangedHandler = (event) => {
 
   this.setState({
-    days: [
+    months: [
       { month:'May', day:17 },
       { month: event.target.value, day:1 },
       { month:'July', day:30 }
