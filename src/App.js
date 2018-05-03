@@ -43,6 +43,17 @@ toggleMonthsHandler = () => {
  this.setState({ showMonths: !doesShow}); // to adjust the state
 }
   render() {
+    const style = {
+      color: '#fff',
+  backgroundColor: 'rgba(245, 232, 28, 0.76)',
+  padding: '7px',
+  fontSize: '22px',
+  fontFamily: 'Gaegu',
+  borderRadius: '10px',
+  marginBottom: '20px',
+  cursor: 'pointer',
+  outline: '0'
+    }
 
     let months = null;
 
@@ -69,7 +80,9 @@ months = (
         <p className="App-intro">
           Something is coming soon...
         </p>
-        <button onClick={this.toggleMonthsHandler}>Show months</button>
+        <button 
+        style = {style}
+        onClick={this.toggleMonthsHandler}>Show months</button>
         {months}
       </div>
     );
