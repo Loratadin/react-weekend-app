@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Radium from 'radium';
 import Day from './Day/Day';
 
 class App extends Component {
@@ -100,4 +101,4 @@ style.backgroundColor = '#f5ba1c';
   }
 }
 
-export default App;
+export default Radium(App);

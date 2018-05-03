@@ -1,5 +1,6 @@
 import React from 'react';
 import './Day.css';
+import Radium from 'radium';
 
 const day = (props) => {
  const style = {
@@ -19,4 +20,4 @@ return (
 )
 }
 
-export default day;
+export default Radium(day);
