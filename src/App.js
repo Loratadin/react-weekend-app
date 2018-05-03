@@ -53,8 +53,12 @@ toggleMonthsHandler = () => {
   borderRadius: '10px',
   marginBottom: '20px',
   cursor: 'pointer',
-  outline: '0'
-    }
+  outline: '0',
+  ':hover': {
+    backgroundColor: '#f5ba1c',
+    color: 'green'
+  }
+  }
 
     let months = null;
 
@@ -73,6 +77,10 @@ months = (
 );
 
 style.backgroundColor = '#f5ba1c';
+style['hover'] = {
+  backgroundColor: '#d5f108',
+  color: 'white'
+};
     }
 
     const classes = [];
