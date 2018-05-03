@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Radium, {StyleRoot} from 'radium';
 import Day from './Day/Day';
 
 class App extends Component {
@@ -53,11 +52,7 @@ toggleMonthsHandler = () => {
   borderRadius: '10px',
   marginBottom: '20px',
   cursor: 'pointer',
-  outline: '0',
-  ':hover': {
-    backgroundColor: '#f5ba1c',
-    color: 'green'
-  }
+  outline: '0'
   }
 
     let months = null;
@@ -77,10 +72,7 @@ months = (
 );
 
 style.backgroundColor = '#f5ba1c';
-style['hover'] = {
-  backgroundColor: '#d5f108',
-  color: 'white'
-};
+
     }
 
     const classes = [];
@@ -91,7 +83,6 @@ style['hover'] = {
       classes.push('bold'); // classes = ['red', 'bold']
     }
     return (
-      <StyleRoot>
       <div className="App">
         <header className="App-header">
           <img src="../lime.png" className="App-logo" alt="logo" />
@@ -106,9 +97,8 @@ style['hover'] = {
         onClick={this.toggleMonthsHandler}>Show months</button>
         {months}
       </div>
-      </StyleRoot>
     );
   }
 }
 
-export default Radium(App);
+export default App;
