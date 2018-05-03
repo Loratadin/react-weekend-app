@@ -70,6 +70,8 @@ months = (
     })}
   </div> 
 );
+
+style.backgroundColor = '#f5ba1c';
     }
     return (
       <div className="App">
