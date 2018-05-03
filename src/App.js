@@ -33,9 +33,9 @@ monthChangedHandler = (event, id) => {
 }
 
 deleteDayHandler = (dayIndex) => {
- const days = [...this.state.days];
+ const days = [...this.state.months];
  days.splice(dayIndex, 1);
- this.setState({days: days});
+ this.setState({months: days});
 }
 
 toggleMonthsHandler = () => {
@@ -74,15 +74,20 @@ months = (
 style.backgroundColor = '#f5ba1c';
     }
 
-    let classes = ['red', 'bold'].join(' '); 
-
+    const classes = [];
+    if (this.state.months.length <= 2) {
+      classes.push('red'); // classes = ['red']
+    }
+    if (this.state.months.length <= 1) {
+      classes.push('bold'); // classes = ['red', 'bold']
+    }
     return (
       <div className="App">
         <header className="App-header">
           <img src="../lime.png" className="App-logo" alt="logo" />
           <h1 className="App-title">Weekend React App</h1>
         </header>
-        <p className={classes}>Dreams, vacations plans, and more...</p> 
+        <p className={classes.join(' ')}>Dreams, vacations plans, and more...</p> 
         <p className="App-intro">
           Something is coming soon...
         </p>
