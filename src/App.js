@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Radium from 'radium';
+import Radium, {StyleRoot} from 'radium';
 import Day from './Day/Day';
 
 class App extends Component {
@@ -91,6 +91,7 @@ style['hover'] = {
       classes.push('bold'); // classes = ['red', 'bold']
     }
     return (
+      <StyleRoot>
       <div className="App">
         <header className="App-header">
           <img src="../lime.png" className="App-logo" alt="logo" />
@@ -105,6 +106,7 @@ style['hover'] = {
         onClick={this.toggleMonthsHandler}>Show months</button>
         {months}
       </div>
+      </StyleRoot>
     );
   }
 }
