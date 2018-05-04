@@ -45,6 +45,7 @@ toggleMonthsHandler = () => {
   render() {
    
     let months = null;
+    let btnClass = ' ';
 
     if (this.state.showMonths) {
 months = (
@@ -59,7 +60,7 @@ months = (
     })}
   </div> 
 );
-
+    btnClass = classes.Red;
 
     }
 

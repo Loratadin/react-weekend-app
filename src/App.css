@@ -69,3 +69,17 @@ button {
   cursor: pointer;
   outline: 0;
 }
+
+button:hover {
+  background-color: lightgreen;
+  color: green;
+}
+
+button.Red {
+  background-color: #f26f0e;
+}
+
+button.Red:hover {
+  background-color: #d7a988;
+  color: #e028bb;
+}
