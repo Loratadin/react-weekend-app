@@ -6,10 +6,12 @@ body {
   font-size: 25px;
   color: #47270d;
 }
+
 p {
   margin: 0;
   padding: 0;
 }
+
 .App {
   text-align: center;
 }
@@ -47,9 +49,23 @@ p {
     transform: rotate(360deg);
   }
 }
+
 .orange {
   color: #f5ba1c;
 }
+
 .bold {
   font-weight: bold;
+}
+
+button {
+  color: #fff;
+  background-color: rgba(245, 232, 28, 0.76);
+  padding: 7px;
+  font-size: 22px;
+  font-family: Gaegu;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  outline: 0;
 }
