@@ -1,5 +1,5 @@
 import React from 'react';
-import './Day.css';
+import classes from './Day.css';
 
 
 const day = (props) => {
@@ -14,7 +14,7 @@ const day = (props) => {
  };
  
 return (
- <div className="Day"> 
+ <div className={classes.Day}> 
   <p onClick={props.click}>I'm {props.month} {props.day}, 2018!</p>
   <p>{props.children}</p>
   <input style={style} type="text" onChange={props.changed} value={props.month}/>

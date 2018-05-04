@@ -84,12 +84,12 @@ style.backgroundColor = '#f5ba1c';
     }
     return (
       <div className={classes.App}>
-        <header className="App-header">
-          <img src="../lime.png" className="App-logo" alt="logo" />
-          <h1 className="App-title">Weekend React App</h1>
+        <header className={classes.Appheader}>
+          <img src="../lime.png" className={classes.Applogo} alt="logo" />
+          <h1 className={classes.Apptitle}>Weekend React App</h1>
         </header>
         <p className={assignedClasses.join(' ')}>Dreams, vacations plans, and more...</p> 
-        <p className="App-intro">
+        <p className={classes.Appintro}>
           Something is coming soon...
         </p>
         <button 

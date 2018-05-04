@@ -14,25 +14,25 @@ p {
   text-align: center;
 }
 
-.App-logo {
+.Applogo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
-.App-header {
+.Appheader {
   background-color: rgba(245, 232, 28, 0.76);
   height: 150px;
   padding: 20px;
   color: white;
 }
 
-.App-title {
+.Apptitle {
   font-size: 40px;
   font-family: Amatic SC;
   text-transform: uppercase;
 }
 
-.App-intro {
+.Appintro {
   font-size: 35px;
   color: #f5ba1c;
   font-family: Amatic SC;
