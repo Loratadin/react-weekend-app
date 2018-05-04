@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import classes from './App.css';
 import Day from './Day/Day';
 
 class App extends Component {
@@ -75,20 +75,20 @@ style.backgroundColor = '#f5ba1c';
 
     }
 
-    const classes = [];
+    const assignedClasses = [];
     if (this.state.months.length <= 2) {
-      classes.push('red'); // classes = ['red']
+      assignedClasses.push(classes.red); // assignedClasses = ['red']
     }
     if (this.state.months.length <= 1) {
-      classes.push('bold'); // classes = ['red', 'bold']
+      assignedClasses.push(classes.bold); // assignedClasses = ['red', 'bold']
     }
     return (
-      <div className="App">
+      <div className={classes.App}>
         <header className="App-header">
           <img src="../lime.png" className="App-logo" alt="logo" />
           <h1 className="App-title">Weekend React App</h1>
         </header>
-        <p className={classes.join(' ')}>Dreams, vacations plans, and more...</p> 
+        <p className={assignedClasses.join(' ')}>Dreams, vacations plans, and more...</p> 
         <p className="App-intro">
           Something is coming soon...
         </p>
