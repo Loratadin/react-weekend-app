@@ -81,7 +81,7 @@ months = (
         <p className={classes.Appintro}>
           Something is coming soon...
         </p>
-        <button 
+        <button className={btnClass}
         onClick={this.toggleMonthsHandler}>Show months</button>
         {months}
       </div>
