@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from './App.css';
-import Day from './Day/Day';
+import Day from '../components/Dates/Day/Day';
 
 class App extends Component {
 state = {
