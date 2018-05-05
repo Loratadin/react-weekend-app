@@ -16,17 +16,17 @@ state = {
 
 monthChangedHandler = (event, id) => {
 
-  const dayIndex = this.state.days.findIndex(p => {
+  const dayIndex = this.state.months.findIndex(p => {
     return p.id === id;
   });
 
   const day = {
-    ...this.state.days[dayIndex]
+    ...this.state.months[dayIndex]
   };
 
   day.name = event.target.value;
 
-  const days = [...this.state.days];
+  const days = [...this.state.months];
   days[dayIndex] = day;
 
   this.setState({days: days})
