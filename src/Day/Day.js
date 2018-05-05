@@ -13,12 +13,6 @@ const day = (props) => {
   color: 'inherit'
  };
 
-
- const rnd = Math.random();
-
- if (rnd > 0.7 ) {
-  throw new Error ('Uups... Something went wrong');
- }
  
 return (
 

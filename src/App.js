@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classes from './App.css';
 import Day from './Day/Day';
-import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
 
 class App extends Component {
 state = {
@@ -52,14 +51,12 @@ toggleMonthsHandler = () => {
 months = (
   <div>
     {this.state.months.map((day, index) => {
-      return <ErrorBoundary>
-        <Day 
+      return <Day 
       click={() => this.deleteDayHandler(index)}
       month={day.month} 
       day={day.day}
       key={day.id}
       changed={(event) => this.monthChangedHandler(event, day.id)}/>
-      </ErrorBoundary>
     })}
   </div> 
 );
