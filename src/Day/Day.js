@@ -12,8 +12,16 @@ const day = (props) => {
   textAlign: 'center',
   color: 'inherit'
  };
+
+
+ const rnd = Math.random();
+
+ if (rnd > 0.7 ) {
+  throw new Error ('Uups... Something went wrong');
+ }
  
 return (
+
  <div className={classes.Day}> 
   <p onClick={props.click}>I'm {props.month} {props.day}, 2018!</p>
   <p>{props.children}</p>
