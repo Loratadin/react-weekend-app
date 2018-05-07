@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from './App.css';
-import Day from '../components/Dates/Day/Day';
+import Dates from '../components/Dates/Dates';
 
 class App extends Component {
 state = {
@@ -50,14 +50,7 @@ toggleMonthsHandler = () => {
     if (this.state.showMonths) {
 months = (
   <div>
-    {this.state.months.map((day, index) => {
-      return <Day 
-      click={() => this.deleteDayHandler(index)}
-      month={day.month} 
-      day={day.day}
-      key={day.id}
-      changed={(event) => this.monthChangedHandler(event, day.id)}/>
-    })}
+    <Dates />
   </div> 
 );
     btnClass = classes.Red;
