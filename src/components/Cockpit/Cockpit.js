@@ -25,8 +25,9 @@ const cockpit = (props) => {
   <p className={classes.Appintro}>
   Something is coming soon...
   </p>
-  <button className={btnClass}
-  onClick={this.toggleMonthsHandler}>Show months</button>
+  <button 
+  className={btnClass}
+  onClick={props.clicked}>Show months</button>
   </div>
   );
 };

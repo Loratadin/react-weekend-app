@@ -49,20 +49,18 @@ toggleMonthsHandler = () => {
     let months = null;
 
     if (this.state.showMonths) {
-months = (
-  <div>
-    <Dates 
+months = <Dates 
     months={this.state.months}
     clicked={this.deleteDayHandler}
-    changed={this.monthChangedHandler}/>
-  </div> 
-);
+    changed={this.monthChangedHandler}/>;
 
     }
 
     return (
       <div className={classes.App}>
-        <Cockpit />
+        <Cockpit showMonths={this.state.showMonths}
+        months={this.state.months}
+        clicked={this.toggleMonthsHandler}/>
         {months}
       </div>
     );
