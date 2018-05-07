@@ -3,16 +3,15 @@ import classes from './Cockpit.css';
 
 const cockpit = (props) => {
  const assignedClasses = [];
-
- let btnClass = ' ';
+ let btnClass = '';
  if (props.showMonths) {
   btnClass = classes.Red;
  }
- if (props.state.months.length <= 2) {
-   assignedClasses.push(classes.orange); // assignedClasses = ['red']
+ if (props.months.length <= 2) {
+   assignedClasses.push(classes.orange); // assignedClasses = ['orange']
  }
- if (props.state.months.length <= 1) {
-   assignedClasses.push(classes.bold); // assignedClasses = ['red', 'bold']
+ if (props.months.length <= 1) {
+   assignedClasses.push(classes.bold); // assignedClasses = ['orange', 'bold']
  }
 
  return (
