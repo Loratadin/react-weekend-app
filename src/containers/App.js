@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+
 import classes from './App.css';
 import Dates from '../components/Dates/Dates';
+import Cockpit from '../components/Cockpit/Cockpit';
 
 class App extends Component {
 state = {
@@ -60,6 +62,7 @@ months = (
 
     return (
       <div className={classes.App}>
+        <Cockpit />
         {months}
       </div>
     );

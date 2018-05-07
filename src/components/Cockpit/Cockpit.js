@@ -5,7 +5,9 @@ const cockpit = (props) => {
  const assignedClasses = [];
 
  let btnClass = ' ';
- btnClass = classes.Red;
+ if (props.showMonths) {
+  btnClass = classes.Red;
+ }
  if (props.state.months.length <= 2) {
    assignedClasses.push(classes.orange); // assignedClasses = ['red']
  }
