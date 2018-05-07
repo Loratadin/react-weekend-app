@@ -49,37 +49,3 @@ p {
     transform: rotate(360deg);
   }
 }
-
-.orange {
-  color: #f5ba1c;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-button {
-  color: #fff;
-  background-color: rgba(245, 232, 28, 0.76);
-  padding: 7px;
-  font-size: 22px;
-  font-family: Gaegu;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  cursor: pointer;
-  outline: 0;
-}
-
-button:hover {
-  background-color: lightgreen;
-  color: green;
-}
-
-button.Red {
-  background-color: #f26f0e;
-}
-
-button.Red:hover {
-  background-color: #d7a988;
-  color: #e028bb;
-}

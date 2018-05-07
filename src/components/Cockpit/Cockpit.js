@@ -1,16 +1,20 @@
 import React from 'react';
+import classes from './Cockpit.css';
 
 const cockpit = (props) => {
  const assignedClasses = [];
+
+ let btnClass = ' ';
+ btnClass = classes.Red;
  if (props.state.months.length <= 2) {
-   assignedClasses.push(classes.red); // assignedClasses = ['red']
+   assignedClasses.push(classes.orange); // assignedClasses = ['red']
  }
  if (props.state.months.length <= 1) {
    assignedClasses.push(classes.bold); // assignedClasses = ['red', 'bold']
  }
 
  return (
-  <div>
+  <div className={classes.cockpit}>
   <header className={classes.Appheader}>
   <img src="../lime.png" className={classes.Applogo} alt="logo" />
   <h1 className={classes.Apptitle}>Weekend React App</h1>
