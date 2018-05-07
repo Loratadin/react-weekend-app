@@ -50,32 +50,18 @@ toggleMonthsHandler = () => {
     if (this.state.showMonths) {
 months = (
   <div>
-    <Dates />
+    <Dates 
+    months={this.state.months}
+    clicked={this.deleteDayHandler}
+    changed={this.monthChangedHandler}/>
   </div> 
 );
     btnClass = classes.Red;
 
     }
 
-    const assignedClasses = [];
-    if (this.state.months.length <= 2) {
-      assignedClasses.push(classes.red); // assignedClasses = ['red']
-    }
-    if (this.state.months.length <= 1) {
-      assignedClasses.push(classes.bold); // assignedClasses = ['red', 'bold']
-    }
     return (
       <div className={classes.App}>
-        <header className={classes.Appheader}>
-          <img src="../lime.png" className={classes.Applogo} alt="logo" />
-          <h1 className={classes.Apptitle}>Weekend React App</h1>
-        </header>
-        <p className={assignedClasses.join(' ')}>Dreams, vacations plans, and more...</p> 
-        <p className={classes.Appintro}>
-          Something is coming soon...
-        </p>
-        <button className={btnClass}
-        onClick={this.toggleMonthsHandler}>Show months</button>
         {months}
       </div>
     );
