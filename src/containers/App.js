@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import classes from './App.css';
 import Dates from '../components/Dates/Dates';
 import Cockpit from '../components/Cockpit/Cockpit';
+import Car from '../components/Car/Car';
 
 class App extends Component {
 state = {
@@ -62,6 +63,7 @@ months = <Dates
         months={this.state.months}
         clicked={this.toggleMonthsHandler}/>
         {months}
+        <Car/>
       </div>
     );
   }
